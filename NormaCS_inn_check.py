@@ -7,13 +7,13 @@
 
 import requests
 from datetime import datetime
-import maskpass
+# import maskpass
 
 
 current_datetime = str(datetime.now())
 sess = requests.Session()
 name = input('Введите логин и нажмите enter: ')
-#password = maskpass.askpass(prompt='Введите пароль и нажмите enter: ')
+# password = maskpass.askpass(prompt='Введите пароль и нажмите enter: ')
 password = input('Введите пароль и нажмите enter: ')
 
 # Функция аутентификации на портале
