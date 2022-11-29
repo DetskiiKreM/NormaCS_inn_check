@@ -1,16 +1,19 @@
 '''
 Данный скрипт предназначен для проверки ИНН на портале разработчика.
 ИНН считываются построчно из файла to_check.txt, и после проверки результат построчно записывается в выходной файл
-в формате: ИНН -  Результат проверки.
+дата_время_inn.txt в формате: ИНН -  Результат проверки.
 '''
 
 
 import requests
 from datetime import datetime
+import maskpass
+
 
 current_datetime = str(datetime.now())
 sess = requests.Session()
 name = input('Введите логин и нажмите enter: ')
+#password = maskpass.askpass(prompt='Введите пароль и нажмите enter: ')
 password = input('Введите пароль и нажмите enter: ')
 
 # Функция аутентификации на портале
